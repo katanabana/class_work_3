@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+{%set profs = 'инженер пилот строитель врач штурман ученый'.split() %}
+<h2>Список профессий</h2>
+{% if kind == 'ol'%}
+<ol>
+    {% for i in profs %}
+    <li class="p-3 mb-2 bg-warning text-dark">{{i}}</li>
+    {% endfor %}
+</ol>
+{% elif kind == 'ul' %}
+<ul>
+    {% for i in profs %}
+    <li class="p-3 mb-2 bg-warning text-dark">{{i}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<h3>Неверный параметр</h3>
+{% endif %}
+{% endblock %}
